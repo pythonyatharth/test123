@@ -1,10 +1,7 @@
 pipeline {    
       agent any
       def app     
-      stage('Clone repository') {               
-             
-            checkout scm    
-      }           stage('Build image') {         
+           stage('Build image') {         
        
             app = docker.build("docker1188/")    
        }           stage('Test image') {                       app.inside {            
