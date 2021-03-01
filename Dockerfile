@@ -1,8 +1,7 @@
-FROM node:latest as node
-RUN mkdir -p /app
-WORKDIR /app
-COPY package*.json /app/
-RUN npm install 
-COPY . /app/
-EXPOSE 4200
-CMD ["npm", "run", "start"]
+FROM tomcat:8.0-alpine
+LABEL maintainer="deepak@softwareyoga.com"
+
+#ADD de.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
