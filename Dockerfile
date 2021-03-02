@@ -1,7 +1,7 @@
 FROM tomcat:8.0-alpine
 LABEL maintainer="deepak@softwareyoga.com"
 
-ADD sample.war /usr/local/tomcat/webapps/
+#ADD sample.war /usr/local/tomcat/webapps/
 
 EXPOSE 8089
 CMD ["catalina.sh", "run"]
